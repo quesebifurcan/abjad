@@ -114,7 +114,7 @@ class Enumeration(enum.IntEnum):
             return cls(expr)
         elif isinstance(expr, str):
             expr = expr.strip()
-            expr = stringtools.to_snake_case(expr) 
+            expr = stringtools.to_snake_case(expr)
             expr = expr.upper()
             return cls[expr]
         elif expr is None:
