@@ -72,6 +72,10 @@ class TestCase(unittest.TestCase):
             diff = output_checker.output_difference(example, actual, flags)
             raise Exception(diff)
 
+    def normalize(self, string):
+        from abjad.tools import stringtools
+        return stringtools.normalize(string)
+
     def reset_string_io(self):
         self.string_io.close()
         self.string_io = StringIO()
